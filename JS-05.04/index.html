@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <p class="titre"> Portfolio de Leo</p>
+
+    <div>
+        <img onclick="agrandirImage('img1')" id="img1" src="images/leo1.jpeg">
+        <button onclick="ecrireLu('lu1','btn1')" id="btn1">Lire</button>
+        <p id="lu1"></p>
+    </div>
+    <div>
+        <img onclick="agrandirImage('img2')" id="img2" src="images/leo2.jpg">
+        <button onclick="ecrireLu('lu2','btn2')" id="btn2">Lire</button>
+        <p id="lu2"></p>
+    </div>
+    <div>
+        <img onclick="agrandirImage('img3')" id="img3" src="images/leo3.jpg">
+        <button onclick="ecrireLu('lu3','btn3')" id="btn3">Lire</button>
+        <p id="lu3"></p>
+    </div>
+</body>
+</html>
+<style>
+    .titre {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .titre2 {
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    div {
+        margin-top: 100px;
+        width:30%;
+        height:425px;
+        float: left;
+        background-color: rgb(75, 96, 144);
+        margin-left: 2.5%;
+    }
+
+    div p {
+        text-align: center;
+        margin-top: 10px;
+        width:20%;
+        margin-left: 40%;
+    }
+
+    div button {
+        width: 20%;
+        margin-left: 40%;
+    }
+
+    div img {
+        width: 100%;
+    }
+</style>
+<script>
+   function ecrireLu(id,btnid)
+   {
+    document.getElementById(id).innerHTML = "lu"
+    changerColor(btnid)
+   }
+
+   function changerColor(id)
+   {
+    document.getElementById(id).style.backgroundColor = "blue"
+   }
+
+   function agrandirImage(id)
+   {
+    let doc = document.getElementById(id)
+    doc.style.width = "110%"
+    doc.style.marginLeft = "-10%"
+   }
+</script>
